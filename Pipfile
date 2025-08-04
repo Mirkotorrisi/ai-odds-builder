@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+xgboost = "*"
+joblib = "*"
+pandas = "*"
+scikit-learn = "*"
+tensorflow = "*"
+typing-extensions = "*"
+fastapi = {extras = ["standard"], version = "*"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"

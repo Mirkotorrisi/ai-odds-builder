@@ -1,0 +1,391 @@
+2025-08-04 15:19:39,192 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 15:19:39,195 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 15:20:44,449 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 15:20:44,451 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 15:22:07,630 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 15:22:07,632 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 15:22:35,018 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 15:22:35,020 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:12:54,939 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:12:54,942 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:12:55,029 [INFO] uvicorn.error: Will watch for changes in these directories: ['/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder']
+2025-08-04 19:12:55,031 [INFO] uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-08-04 19:12:55,031 [INFO] uvicorn.error: Started reloader process [57141] using WatchFiles
+2025-08-04 19:13:07,705 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:13:07,708 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:13:07,708 [INFO] uvicorn.error: Started server process [57221]
+2025-08-04 19:13:07,710 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:13:07,711 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:14:12,863 [INFO] app: Received GET on /odds endpoint
+2025-08-04 19:14:13,234 [ERROR] app: Error predicting odds for match Genoa vs Lecce: Home team not found in training: 'Genoa'
+2025-08-04 19:14:13,234 [ERROR] app: Error predicting odds for match AC Milan vs Cremonese: Home team not found in training: 'Ac Milan'
+2025-08-04 19:14:13,234 [ERROR] app: Error predicting odds for match Roma vs Bologna: Home team not found in training: 'Roma'
+2025-08-04 19:14:13,235 [ERROR] app: Error predicting odds for match Sassuolo vs Napoli: Home team not found in training: 'Sassuolo'
+2025-08-04 19:14:13,235 [ERROR] app: Error predicting odds for match Atalanta vs Pisa: Home team not found in training: 'Atalanta'
+2025-08-04 19:14:13,235 [ERROR] app: Error predicting odds for match Cagliari vs Fiorentina: Home team not found in training: 'Cagliari'
+2025-08-04 19:14:13,235 [ERROR] app: Error predicting odds for match Como vs Lazio: Home team not found in training: 'Como'
+2025-08-04 19:14:13,235 [ERROR] app: Error predicting odds for match Juventus vs Parma: Home team not found in training: 'Juventus'
+2025-08-04 19:14:13,235 [ERROR] app: Error predicting odds for match Inter Milan vs Torino: Home team not found in training: 'Inter Milan'
+2025-08-04 19:14:13,235 [ERROR] app: Error predicting odds for match Udinese vs Hellas Verona: Home team not found in training: 'Udinese'
+2025-08-04 19:14:13,235 [ERROR] app: Error predicting odds for match Cremonese vs Sassuolo: Home team not found in training: 'Cremonese'
+2025-08-04 19:14:13,235 [ERROR] app: Error predicting odds for match Lecce vs AC Milan: Home team not found in training: 'Lecce'
+2025-08-04 19:14:13,236 [ERROR] app: Error predicting odds for match Bologna vs Como: Home team not found in training: 'Bologna'
+2025-08-04 19:14:13,236 [ERROR] app: Error predicting odds for match Parma vs Atalanta: Home team not found in training: 'Parma'
+2025-08-04 19:14:13,236 [ERROR] app: Error predicting odds for match Napoli vs Cagliari: Home team not found in training: 'Napoli'
+2025-08-04 19:14:13,242 [ERROR] uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/fastapi/routing.py", line 328, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/fastapi/routing.py", line 177, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': []}
+
+2025-08-04 19:17:36,452 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:17:36,497 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/predict_odds.py'. Reloading...
+2025-08-04 19:17:36,609 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:17:36,714 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:17:36,729 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:17:36,760 [INFO] uvicorn.error: Finished server process [57221]
+2025-08-04 19:17:38,998 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:17:40,224 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:17:49,226 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:17:49,228 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:17:49,228 [INFO] uvicorn.error: Started server process [57800]
+2025-08-04 19:17:49,230 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:17:49,231 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:19:54,911 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:19:54,914 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/train.py'. Reloading...
+2025-08-04 19:19:55,011 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:19:55,203 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:19:55,207 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:19:55,209 [INFO] uvicorn.error: Finished server process [57800]
+2025-08-04 19:19:57,934 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:20:11,282 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:20:11,284 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:20:11,285 [INFO] uvicorn.error: Started server process [58963]
+2025-08-04 19:20:11,286 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:20:11,287 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:20:28,066 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:20:48,899 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:20:48,901 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/train.py'. Reloading...
+2025-08-04 19:20:48,993 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:20:49,094 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:20:49,095 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:20:49,095 [INFO] uvicorn.error: Finished server process [58963]
+2025-08-04 19:20:50,154 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:21:00,603 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:21:00,605 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:21:00,606 [INFO] uvicorn.error: Started server process [59090]
+2025-08-04 19:21:00,607 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:21:00,608 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:23:22,281 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:23:22,282 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/train.py'. Reloading...
+2025-08-04 19:23:22,315 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:23:22,422 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:23:22,423 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:23:22,424 [INFO] uvicorn.error: Finished server process [59090]
+2025-08-04 19:23:23,762 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:23:35,249 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:23:35,251 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:23:35,251 [INFO] uvicorn.error: Started server process [59402]
+2025-08-04 19:23:35,253 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:23:35,254 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:24:09,881 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:24:14,700 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:25:35,304 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:25:35,307 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/predict_odds.py'. Reloading...
+2025-08-04 19:25:35,370 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:25:35,472 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:25:35,473 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:25:35,474 [INFO] uvicorn.error: Finished server process [59402]
+2025-08-04 19:25:36,512 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:25:37,503 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:25:45,257 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:25:45,259 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:25:45,259 [INFO] uvicorn.error: Started server process [60316]
+2025-08-04 19:25:45,261 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:25:45,263 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:26:28,585 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:26:28,586 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/predict_odds.py'. Reloading...
+2025-08-04 19:26:28,637 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:26:28,739 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:26:28,740 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:26:28,741 [INFO] uvicorn.error: Finished server process [60316]
+2025-08-04 19:26:29,813 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:26:30,697 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:26:38,491 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:26:38,493 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:26:38,494 [INFO] uvicorn.error: Started server process [60423]
+2025-08-04 19:26:38,495 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:26:38,496 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:28:59,147 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:28:59,148 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/train.py'. Reloading...
+2025-08-04 19:28:59,175 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:28:59,277 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:28:59,278 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:28:59,279 [INFO] uvicorn.error: Finished server process [60423]
+2025-08-04 19:29:00,289 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:29:08,876 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:29:08,878 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:29:08,878 [INFO] uvicorn.error: Started server process [60718]
+2025-08-04 19:29:08,880 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:29:08,881 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:29:54,043 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:29:54,044 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/train.py'. Reloading...
+2025-08-04 19:29:54,069 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:29:54,170 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:29:54,171 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:29:54,171 [INFO] uvicorn.error: Finished server process [60718]
+2025-08-04 19:29:55,146 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:30:02,640 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:30:02,641 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/train.py'. Reloading...
+2025-08-04 19:30:04,043 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:30:04,046 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:30:04,046 [INFO] uvicorn.error: Started server process [60832]
+2025-08-04 19:30:04,048 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:30:04,049 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:30:04,059 [ERROR] uvicorn.error: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1512, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1505, in uvloop.loop.Loop.run_until_complete
+  File "uvloop/loop.pyx", line 1379, in uvloop.loop.Loop.run_forever
+  File "uvloop/loop.pyx", line 557, in uvloop.loop.Loop._run
+  File "uvloop/loop.pyx", line 476, in uvloop.loop.Loop._on_idle
+  File "uvloop/cbhandles.pyx", line 83, in uvloop.loop.Handle._run
+  File "uvloop/cbhandles.pyx", line 63, in uvloop.loop.Handle._run
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 70, in serve
+    with self.capture_signals():
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/uvicorn/server.py", line 331, in capture_signals
+    signal.raise_signal(captured_signal)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/rich_toolkit/utils/colors.py", line 159, in <lambda>
+    signal.SIGTERM, lambda signum, frame: (restore_terminal(), sys.exit(0))
+                                                               ^^^^^^^^^^^
+SystemExit: 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 701, in lifespan
+    await receive()
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/queues.py", line 158, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-08-04 19:30:05,094 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:30:13,908 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:30:13,910 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:30:13,911 [INFO] uvicorn.error: Started server process [60860]
+2025-08-04 19:30:13,913 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:30:13,914 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:30:22,203 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:30:26,848 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:30:48,316 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:30:48,316 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/predict_odds.py'. Reloading...
+2025-08-04 19:30:48,408 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:30:48,510 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:30:48,512 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:30:48,513 [INFO] uvicorn.error: Finished server process [60860]
+2025-08-04 19:30:49,497 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:30:50,328 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:30:58,039 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:30:58,042 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:30:58,042 [INFO] uvicorn.error: Started server process [61057]
+2025-08-04 19:30:58,043 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:30:58,045 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:31:24,365 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:31:24,366 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/predict_odds.py'. Reloading...
+2025-08-04 19:31:24,468 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:31:24,569 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:31:24,570 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:31:24,571 [INFO] uvicorn.error: Finished server process [61057]
+2025-08-04 19:31:25,621 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:31:26,498 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:31:34,229 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:31:34,231 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:31:34,231 [INFO] uvicorn.error: Started server process [61135]
+2025-08-04 19:31:34,232 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:31:34,234 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:31:50,536 [INFO] app: Received GET on /odds endpoint
+2025-08-04 19:31:51,181 [ERROR] app: Error predicting odds for match AC Milan vs Cremonese: Home team not found in training: 'Ac Milan'
+2025-08-04 19:31:52,013 [ERROR] app: Error predicting odds for match Lecce vs AC Milan: Away team not found in training: 'Ac Milan'
+2025-08-04 19:31:52,290 [ERROR] uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/starlette/routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/fastapi/routing.py", line 328, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder/.venv/lib/python3.11/site-packages/fastapi/routing.py", line 177, in serialize_response
+    raise ResponseValidationError(
+fastapi.exceptions.ResponseValidationError: 1 validation errors:
+  {'type': 'model_attributes_type', 'loc': ('response',), 'msg': 'Input should be a valid dictionary or object to extract fields from', 'input': [{'id': 'Genoa_Lecce_2025-08-23T16:30:00', 'sport_key': 'serie_a', 'matchId': 'GEN-LEC2025-08-23', 'teams': ['Genoa', 'Lecce'], 'start': '2025-08-23T16:30:00', 'odds': {'home': 2.42, 'away': 3.54, 'draw': 2.95, 'over': 2.41, 'under': 1.47, 'gg': 2.05, 'ng': 1.65}}, {'id': 'Roma_Bologna_2025-08-23T18:45:00', 'sport_key': 'serie_a', 'matchId': 'ROM-BOL2025-08-23', 'teams': ['Roma', 'Bologna'], 'start': '2025-08-23T18:45:00', 'odds': {'home': 2.93, 'away': 4.19, 'draw': 3.44, 'over': 2.1, 'under': 1.65, 'gg': 2.0, 'ng': 1.74}}, {'id': 'Sassuolo_Napoli_2025-08-23T16:30:00', 'sport_key': 'serie_a', 'matchId': 'SAS-NAP2025-08-23', 'teams': ['Sassuolo', 'Napoli'], 'start': '2025-08-23T16:30:00', 'odds': {'home': 4.79, 'away': 1.66, 'draw': 3.12, 'over': 2.38, 'under': 1.52, 'gg': 2.07, 'ng': 1.71}}, {'id': 'Atalanta_Pisa_2025-08-24T18:45:00', 'sport_key': 'serie_a', 'matchId': 'ATA-PIS2025-08-24', 'teams': ['Atalanta', 'Pisa'], 'start': '2025-08-24T18:45:00', 'odds': {'home': 0.27, 'away': 7.94, 'draw': 4.45, 'over': 1.64, 'under': 2.04, 'gg': 1.84, 'ng': 1.92}}, {'id': 'Cagliari_Fiorentina_2025-08-24T16:30:00', 'sport_key': 'serie_a', 'matchId': 'CAG-FIO2025-08-24', 'teams': ['Cagliari', 'Fiorentina'], 'start': '2025-08-24T16:30:00', 'odds': {'home': 3.2, 'away': 2.2, 'draw': 3.12, 'over': 2.06, 'under': 1.69, 'gg': 1.77, 'ng': 1.91}}, {'id': 'Como_Lazio_2025-08-24T16:30:00', 'sport_key': 'serie_a', 'matchId': 'COM-LAZ2025-08-24', 'teams': ['Como', 'Lazio'], 'start': '2025-08-24T16:30:00', 'odds': {'home': 3.36, 'away': 2.27, 'draw': 3.4, 'over': 1.84, 'under': 1.91, 'gg': 1.69, 'ng': 2.04}}, {'id': 'Juventus_Parma_2025-08-24T18:45:00', 'sport_key': 'serie_a', 'matchId': 'JUV-PAR2025-08-24', 'teams': ['Juventus', 'Parma'], 'start': '2025-08-24T18:45:00', 'odds': {'home': 1.72, 'away': 7.73, 'draw': 4.43, 'over': 1.66, 'under': 2.09, 'gg': 1.91, 'ng': 1.9}}, {'id': 'Inter Milan_Torino_2025-08-25T18:45:00', 'sport_key': 'serie_a', 'matchId': 'INT-TOR2025-08-25', 'teams': ['Inter Milan', 'Torino'], 'start': '2025-08-25T18:45:00', 'odds': {'home': 0.7, 'away': 8.39, 'draw': 4.45, 'over': 1.94, 'under': 1.88, 'gg': 2.08, 'ng': 1.66}}, {'id': 'Udinese_Hellas Verona_2025-08-25T16:30:00', 'sport_key': 'serie_a', 'matchId': 'UDI-HEL2025-08-25', 'teams': ['Udinese', 'Hellas Verona'], 'start': '2025-08-25T16:30:00', 'odds': {'home': 2.31, 'away': 4.47, 'draw': 3.58, 'over': 2.08, 'under': 1.67, 'gg': 1.95, 'ng': 1.77}}, {'id': 'Cremonese_Sassuolo_2025-08-29T16:30:00', 'sport_key': 'serie_a', 'matchId': 'CRE-SAS2025-08-29', 'teams': ['Cremonese', 'Sassuolo'], 'start': '2025-08-29T16:30:00', 'odds': {'home': 3.33, 'away': 3.55, 'draw': 3.5, 'over': 2.07, 'under': 1.73, 'gg': 1.89, 'ng': 1.83}}, {'id': 'Bologna_Como_2025-08-30T16:30:00', 'sport_key': 'serie_a', 'matchId': 'BOL-COM2025-08-30', 'teams': ['Bologna', 'Como'], 'start': '2025-08-30T16:30:00', 'odds': {'home': 2.15, 'away': 3.48, 'draw': 3.01, 'over': 2.09, 'under': 1.6, 'gg': 1.81, 'ng': 1.9}}, {'id': 'Parma_Atalanta_2025-08-30T16:30:00', 'sport_key': 'serie_a', 'matchId': 'PAR-ATA2025-08-30', 'teams': ['Parma', 'Atalanta'], 'start': '2025-08-30T16:30:00', 'odds': {'home': 4.92, 'away': 1.16, 'draw': 3.89, 'over': 1.67, 'under': 2.22, 'gg': 1.66, 'ng': 2.19}}, {'id': 'Napoli_Cagliari_2025-08-30T18:45:00', 'sport_key': 'serie_a', 'matchId': 'NAP-CAG2025-08-30', 'teams': ['Napoli', 'Cagliari'], 'start': '2025-08-30T18:45:00', 'odds': {'home': 0.7, 'away': 8.41, 'draw': 4.72, 'over': 1.76, 'under': 1.98, 'gg': 2.06, 'ng': 1.69}}]}
+
+2025-08-04 19:35:19,018 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:35:19,020 [WARNING] uvicorn.error: WatchFiles detected changes in 'routes/get_odds.py'. Reloading...
+2025-08-04 19:35:19,087 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:35:19,188 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:35:19,189 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:35:19,189 [INFO] uvicorn.error: Finished server process [61135]
+2025-08-04 19:35:20,216 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:35:20,934 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:35:28,752 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:35:28,754 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:35:28,755 [INFO] uvicorn.error: Started server process [61603]
+2025-08-04 19:35:28,756 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:35:28,757 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:35:34,959 [INFO] app: Received GET on /odds endpoint
+2025-08-04 19:35:35,759 [ERROR] app: Error predicting odds for match AC Milan vs Cremonese: Home team not found in training: 'Ac Milan'
+2025-08-04 19:35:36,586 [ERROR] app: Error predicting odds for match Lecce vs AC Milan: Away team not found in training: 'Ac Milan'
+2025-08-04 19:41:14,628 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:41:14,637 [WARNING] uvicorn.error: WatchFiles detected changes in 'routes/get_odds.py'. Reloading...
+2025-08-04 19:41:14,727 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:41:14,848 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:41:14,851 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:41:14,852 [INFO] uvicorn.error: Finished server process [61603]
+2025-08-04 19:41:16,196 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:41:17,278 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:41:26,724 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:41:26,726 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:41:26,727 [INFO] uvicorn.error: Started server process [62323]
+2025-08-04 19:41:26,728 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:41:26,729 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:41:26,737 [INFO] app: Received GET on /odds endpoint
+2025-08-04 19:41:27,462 [ERROR] app: Error predicting odds for match AC Milan vs Cremonese: Home team not found in training: 'Ac Milan'
+2025-08-04 19:41:28,282 [ERROR] app: Error predicting odds for match Lecce vs AC Milan: Away team not found in training: 'Ac Milan'
+2025-08-04 19:42:22,562 [INFO] app: Received GET on /odds endpoint
+2025-08-04 19:42:22,951 [ERROR] app: Error predicting odds for match AC Milan vs Cremonese: Home team not found in training: 'Ac Milan'
+2025-08-04 19:42:23,772 [ERROR] app: Error predicting odds for match Lecce vs AC Milan: Away team not found in training: 'Ac Milan'
+2025-08-04 19:42:36,500 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:42:36,601 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:42:36,602 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:42:36,603 [INFO] uvicorn.error: Finished server process [62323]
+2025-08-04 19:42:36,718 [INFO] uvicorn.error: Stopping reloader process [57141]
+2025-08-04 19:42:51,639 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:42:51,641 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:42:51,704 [INFO] uvicorn.error: Will watch for changes in these directories: ['/Users/mirkotorrisi/Documents/Bollette/ai-odds-builder']
+2025-08-04 19:42:51,705 [INFO] uvicorn.error: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+2025-08-04 19:42:51,706 [INFO] uvicorn.error: Started reloader process [62653] using WatchFiles
+2025-08-04 19:43:00,734 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:43:00,736 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:43:00,736 [INFO] uvicorn.error: Started server process [62678]
+2025-08-04 19:43:00,738 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:43:00,739 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:43:12,454 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:45:06,134 [INFO] app: Received GET on /odds endpoint
+2025-08-04 19:45:06,619 [ERROR] app: Error predicting odds for match AC Milan vs Cremonese: Home team not found in training: 'Ac Milan'
+2025-08-04 19:45:07,462 [ERROR] app: Error predicting odds for match Lecce vs AC Milan: Away team not found in training: 'Ac Milan'
+2025-08-04 19:45:17,496 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:45:17,959 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:45:42,989 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:47:36,745 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:50:57,605 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:50:57,607 [WARNING] uvicorn.error: WatchFiles detected changes in 'services/train.py'. Reloading...
+2025-08-04 19:50:57,626 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:50:57,727 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:50:57,729 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:50:57,729 [INFO] uvicorn.error: Finished server process [62678]
+2025-08-04 19:50:58,756 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:51:09,590 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:51:09,593 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:51:09,593 [INFO] uvicorn.error: Started server process [63658]
+2025-08-04 19:51:09,595 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:51:09,596 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:51:40,005 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:51:40,006 [WARNING] uvicorn.error: WatchFiles detected changes in 'routes/get_odds.py'. Reloading...
+2025-08-04 19:51:40,025 [INFO] uvicorn.error: Shutting down
+2025-08-04 19:51:40,126 [INFO] uvicorn.error: Waiting for application shutdown.
+2025-08-04 19:51:40,127 [INFO] uvicorn.error: Application shutdown complete.
+2025-08-04 19:51:40,128 [INFO] uvicorn.error: Finished server process [63658]
+2025-08-04 19:51:41,150 [INFO] watchfiles.main: 1 change detected
+2025-08-04 19:51:42,238 [INFO] watchfiles.main: 3 changes detected
+2025-08-04 19:51:51,844 [INFO] app: Starting Ai Odds Builder API
+2025-08-04 19:51:51,846 [INFO] app: Ai Odds Builder API started successfully
+2025-08-04 19:51:51,846 [INFO] uvicorn.error: Started server process [63760]
+2025-08-04 19:51:51,848 [INFO] uvicorn.error: Waiting for application startup.
+2025-08-04 19:51:51,849 [INFO] uvicorn.error: Application startup complete.
+2025-08-04 19:51:51,858 [INFO] app: Received GET on /odds endpoint
+2025-08-04 19:51:52,460 [ERROR] app: Error predicting odds for match AC Milan vs Cremonese: Home team not found in training: 'Ac Milan'
+2025-08-04 19:51:53,292 [ERROR] app: Error predicting odds for match Lecce vs AC Milan: Away team not found in training: 'Ac Milan'
+2025-08-04 19:52:13,747 [INFO] watchfiles.main: 35 changes detected
+2025-08-04 19:52:14,209 [INFO] watchfiles.main: 2 changes detected
+2025-08-04 19:52:25,422 [INFO] watchfiles.main: 6 changes detected
