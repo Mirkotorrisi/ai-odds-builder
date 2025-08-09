@@ -3,19 +3,27 @@ import numpy as np
 from models.prediction_output import PredictionOutput
 from tensorflow.keras.models import load_model
 
+MARKET_MODELS = ("market_1X2", "market_OU", "market_BTTS")
 
-MODEL_PATH = "assets/odds_embed_model.keras"
-SCALER_PATH = "assets/odds_scaler.joblib"
+model_paths = [f"assets/{market}_model.keras" for market in MARKET_MODELS]
+scaler_paths = [f"assets/{market}_scaler.joblib" for market in MARKET_MODELS]
+
 TEAM_MAP_PATH = "assets/team_id_map.joblib"
 
 TARGET_COLS = [
-    "outcome1", "outcomeX", "outcome2",
-    "outcomeOver", "outcomeUnder",
-    "outcomeGG", "outcomeNG"
+    ["outcome1", "outcomeX", "outcome2"],
+    ["outcomeOver", "outcomeUnder"],
+    ["outcomeGG", "outcomeNG"]
 ]
 
-model = load_model(MODEL_PATH)
-scaler = joblib.load(SCALER_PATH)
+models = []
+scalers = []
+for model_path, scaler_path in zip(model_paths, scaler_paths):
+    model = load_model(model_path)
+    scaler = joblib.load(scaler_path)
+    models.append(model)
+    scalers.append(scaler)
+
 team_map = joblib.load(TEAM_MAP_PATH)
 
 def predict_match_odds(home_name: str, away_name: str) -> PredictionOutput:
@@ -37,8 +45,18 @@ def predict_match_odds(home_name: str, away_name: str) -> PredictionOutput:
     away_id = np.array([[team_map[away_name]]])
 
     # Prediction
-    pred_scaled = model.predict([home_id, away_id], verbose=0)
-    pred = scaler.inverse_transform(pred_scaled)[0]
+    results = {}
+    for model, scaler, target_cols in zip(models, scalers, TARGET_COLS):
+        # Predict and inverse transform
+        pred_scaled = model.predict([home_id, away_id], verbose=0)
+        pred = scaler.inverse_transform(pred_scaled)[0]
 
-    # Return as dictionary
-    return dict(zip(TARGET_COLS, map(lambda x: round(x, 2), pred)))
+        # Round the predictions
+        pred = np.round(pred, 2)
+
+        # Merge this market's predictions into the results dict
+        results.update(dict(zip(target_cols, pred)))
+
+    # Create and return a single PredictionOutput with all markets
+    return results
+

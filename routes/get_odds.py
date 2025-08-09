@@ -7,6 +7,7 @@ from typing_extensions import Annotated
 
 from utils.logger import logger
 from utils.get_match_id import get_match_id
+from utils.harmonize_odds import harmonize_odds
 from services.fetch_matches import fetch_matches
 from services.predict_odds import predict_match_odds
 
@@ -34,7 +35,10 @@ def get_all_odds() -> LeagueOutput:
         result = []
         for match in matches:
             try:
-                odds = predict_match_odds(match["home_team"], match["away_team"])
+                raw_odds = predict_match_odds(match["home_team"], match["away_team"])
+                home, draw, away = harmonize_odds([raw_odds["outcome1"], raw_odds["outcomeX"], raw_odds["outcome2"]])
+                over, under = harmonize_odds([raw_odds["outcomeOver"], raw_odds["outcomeUnder"]])
+                gg, ng = harmonize_odds([raw_odds["outcomeGG"], raw_odds["outcomeNG"]])
                 result.append({
                     "id": f"{match['home_team']}_{match['away_team']}_{match['timestamp']}",
                     "sport_key": "serie_a", #Hardcoded for Serie A
@@ -42,13 +46,13 @@ def get_all_odds() -> LeagueOutput:
                     "teams": [match["home_team"], match["away_team"]],
                     "start": match["timestamp"],
                     "odds": {
-                        "home": round(float(odds["outcome1"]), 2),
-                        "away": round(float(odds["outcome2"]), 2),
-                        "draw": round(float(odds["outcomeX"]), 2),
-                        "over": round(float(odds["outcomeOver"]), 2),
-                        "under": round(float(odds["outcomeUnder"]), 2),
-                        "gg": round(float(odds["outcomeGG"]), 2),
-                        "ng": round(float(odds["outcomeNG"]), 2)
+                        "home": home,
+                        "away": away,
+                        "draw": draw,
+                        "over": over,
+                        "under": under,
+                        "gg": gg,
+                        "ng": ng
                     }
                 })
             except Exception as e:
