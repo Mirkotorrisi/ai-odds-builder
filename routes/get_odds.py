@@ -44,7 +44,7 @@ def get_all_odds() -> LeagueOutput:
                     "sport_key": "serie_a", #Hardcoded for Serie A
                     "matchId": get_match_id(match["home_team"], match["away_team"], match["timestamp"]),
                     "teams": [match["home_team"], match["away_team"]],
-                    "start": match["timestamp"],
+                    "start": f"{match['timestamp']}.000Z",
                     "odds": {
                         "home": home,
                         "away": away,
