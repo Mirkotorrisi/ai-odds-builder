@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "/Users/mirkotorrisi/.local/share/virtualenvs/ai-odds-builder-XnVzbA9G",
+  "python.terminal.activateEnvironment": true,
+  "python-envs.defaultEnvManager": "ms-python.python:pipenv",
+  "python-envs.pythonProjects": []
+}
